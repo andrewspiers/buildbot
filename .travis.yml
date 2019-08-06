@@ -65,10 +65,11 @@ after_script:
   - "pip list"
 
 sudo: false
-branches:
-  # Only build main-line branches.
-  only:
-    - master
-    - eight
+#branches:
+#  # Only build main-line branches.
+#  only:
+#    - master
+#    - eight
+
 git:
   depth: 300
