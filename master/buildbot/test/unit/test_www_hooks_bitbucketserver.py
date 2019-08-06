@@ -852,7 +852,8 @@ class TestChangeHookConfiguredWithGitChange(unittest.TestCase,
     @defer.inlineCallbacks
     def testHookWithChangeOnDeleteBranch(self):
         request = _prepare_request(
-            deleteBranchJsonPayload, headers={_HEADER_EVENT: 'repo:refs_changed'})
+            deleteBranchJsonPayload,
+            headers={_HEADER_EVENT: 'repo:refs_changed'})
         yield request.test_render(self.change_hook)
         self.assertEqual(len(self.change_hook.master.data.updates.changesAdded), 1)
         change = self.change_hook.master.data.updates.changesAdded[0]
