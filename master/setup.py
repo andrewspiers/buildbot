@@ -505,7 +505,7 @@ setup_args['extras_require'] = {
         'setuptools_trial',
         'isort',
         # spellcheck introduced in version 1.4.0
-        'pylint<1.7.0',
+        'pylint<2.4.0',
         'pyenchant',
         'flake8~=2.6.0',
     ] + test_deps,
