@@ -1,0 +1,14 @@
+diff --git a/Makefile b/Makefile
+index 3b639a251..daa4758d5 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,8 @@
+ .SHELLFLAGS := -eu -c
+ 
+ # developer utilities
+-DOCKERBUILD := docker build --build-arg http_proxy=$$http_proxy --build-arg https_proxy=$$https_proxy
++# developer proxy footgun! DOCKERBUILD := docker build --build-arg http_proxy=$$http_proxy --build-arg https_proxy=$$https_proxy
++DOCKERBUILD := docker build
+ ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+ 
+ .PHONY: docs pylint ruff virtualenv
